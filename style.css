@@ -1,0 +1,160 @@
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+
+body {
+	background-color: #555;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	color:#333
+}
+	
+b,h1,h2,h3,h4,h5 {
+	font-weight: 700
+}
+	
+div.page {
+	width:100%;
+	height:100%;
+	margin:1em auto;
+}
+
+div.head {
+	background-color:#B70000;
+	color:#fff;
+	padding:0.5em;
+	font-weight:700;
+	
+	border-top-left-radius:0.5em;
+	 border-top-right-radius:0.5em; 
+	-webkit-border-top-left-radius:0.5em;
+	-webkit-border-top-right-radius:0.5em;
+	
+	
+}
+	
+div.content {
+	padding:0.5em;
+	background-color: #fff;
+}
+div.foot{
+	padding:1em;
+	background-color: #fff;
+	color: #aaa;
+	text-align:right;
+	font-size:small;
+	
+	border-bottom-left-radius:0.5em;
+	border-bottom-right-radius:0.5em;
+	-webkit-border-bottom-left-radius:0.5em;
+	-webkit-border-bottom-right-radius:0.5em;
+	
+}
+
+div.foot a {
+	text-decoration:none;
+	color: #aaa;
+	font-weight:700;
+}
+
+
+/* Listen */
+table {
+	width:100%;
+}
+td {
+	padding-left: 0.5em;
+}
+
+td.head {
+	font-weight:700;
+	background-color:#555;
+	color:#eee !important;
+}
+
+
+div.head  td:nth-child(2) {
+	white-space: nowrap;
+	text-align:right;
+	padding-right:0.5em;
+}
+
+div.content table tr:nth-child(odd) {
+	background-color:#eee;
+}
+div.content table tr:nth-child(even) {
+	background-color:#fff;
+}
+div.content td:nth-child(1) {
+	text-align:right;
+	width: 1em;
+	padding-right: 0.5em;
+}
+div.content td:nth-child(2) {
+	font-size:small;
+}
+div.content  td:nth-child(3) {
+	width: 4em;
+	text-align:right;
+	padding-right:0.2em;
+	white-space: nowrap;
+	color:#888;
+	
+}
+td.realtime {
+	color:#333 !important;
+}
+
+img.realtime {
+vertical-align:middle;
+	display:inline;
+	height:2ex;
+	margin-left:0.2em;
+}
+
+
+h1 {
+	font-size:large;
+	font-weight:700;
+	display:inline;
+}
+
+/* Formular */
+div.content select {
+	width:100%;
+}
+
+button{
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#eee;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#666666;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+	width: 100%;
+	margin: 2px;
+}
+button:hover {
+	background-color:#f6f6f6;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+button.trigger {
+	width: 400px; 
+	margin: 5px;
+	padding: 10px;
+}
+
+div#load {
+	text-align:center;
+	padding:3em;
+}
+img#load {
+	margin: 0 auto;
+}
