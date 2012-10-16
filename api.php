@@ -123,6 +123,10 @@ try {
 		$richtung = $dep->itdServingLine['direction'];
 		$countdown = $dep['countdown'];
 
+
+		// get the Delay
+		$delay = $dep->itdServingLine->itdNoTrain['delay'];
+		
 		// quickfix simon fuchs: 
 		// ding stellt manchmal alte busse zur verfügung
 		// nachteil quickfix: normale busse mit countdown == 0 werden auch ausgeblendet
@@ -140,6 +144,7 @@ try {
 		$data['countdown'] = "$countdown";
 		$data['realtime'] = "$realtime";
 		$data['timetable'] = "$timetable";
+		$data['delay'] = "$delay";
 		$data['platform'] = (string)$dep['platform'];
 		
 		array_push($departures, $data);
