@@ -4,7 +4,7 @@ function init_app(url){
 	
 	setTimeout(function() {
 		init_app(url);
-	}, 10000); // 10 seconds refresh
+	}, 100000); // 10 seconds refresh
 }
 
 function updateBus(url) {
@@ -22,21 +22,27 @@ function updateBus(url) {
 			i++;
 			// insert realtimeclass 
 			if (deps.realtime=='1') {
-				textRealtime = "class='realtime'";
+				classRealtime = "realtime";
 				stern = "<img class=\"realtime\" src=\"img/realtime.png\">";
 			} else {
-				textRealtime = "";
+				classRealtime = "notrealtime";
 				stern = "<img class=\"realtime\" src=\"img/norealtime.png\">";
 			}
+			// sometimes, lines are canceled:
+			if (deps.delay == "-9999") { // line is canceled
+				classCanceled = "canceled";
+			} else {
+				classCanceled = "";
+			}
 			// html stuff
-			text = '<tr id="liste'+i+'"><td>' + deps.line + '</td>';
-			text = text + '<td>' + deps.direction + '</td>';
+			text = '<tr id="liste'+i+'"><td class="'+classCanceled+'">' + deps.line + '</td>';
+			text = text + '<td class="'+classCanceled+'">' + deps.direction + '</td>';
 
 			
 			if (deps.countdown < 20) {
-				text = text + '<td '+textRealtime+'>' + deps.countdown  + stern+'</td>';
+				text = text + '<td class="'+classRealtime+' '+classCanceled+'">' + deps.countdown  + stern+'</td>';
 			} else {
-				text = text + '<td '+textRealtime+'>' + deps.timetable  +  stern+'</td>';
+				text = text + '<td class="'+classRealtime+' '+classCanceled+'">' + deps.timetable  +  stern+'</td>';
 			}
 			
 			text = text + '</tr>';
