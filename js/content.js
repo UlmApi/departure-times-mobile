@@ -1,10 +1,9 @@
-
 function init_app(url){
 	updateBus(url);
 	
 	setTimeout(function() {
 		init_app(url);
-	}, 100000); // 10 seconds refresh
+	}, 10000); // 10 seconds refresh
 }
 
 function updateBus(url) {
