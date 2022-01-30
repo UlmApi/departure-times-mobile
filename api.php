@@ -41,15 +41,13 @@
 $maxBus = ($_GET['limit']);
 //$maxBus = 1;
 $id = "900".($_GET['id']);
-$platform = ($_GET['platform']);
-if (!$platform) {
-	$platform = false;
-} else {
-	if (strpos($platform,";")) // ; als trenner
-		$platform = explode (";",$platform);	
-	else // . als trenner
-		$platform = explode (".",$platform);
-	
+$platform = false;
+if (!empty($_GET['platform'])) {
+        $platform = ($_GET['platform']);
+        if (strpos($platform,";")) // ; als trenner
+                $platform = explode (";",$platform);
+        else // . als trenner
+                $platform = explode (".",$platform);
 }
 
 

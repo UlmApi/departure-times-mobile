@@ -10,7 +10,7 @@
 <script type="text/javascript">
 <?php
 	$id = ($_GET['id']);
-	$platform = ($_GET['platform']);
+	$platform = (isset($_GET['platform'])?$_GET['platform']:null);
 	echo "$(document).ready(init_app('api.php?id=$id&limit=21&platform=$platform'));"
 ?>
 </script>
